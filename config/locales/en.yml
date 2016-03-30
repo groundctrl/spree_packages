@@ -1,0 +1,4 @@
+en:
+  spree:
+    packages:
+      hello: world
