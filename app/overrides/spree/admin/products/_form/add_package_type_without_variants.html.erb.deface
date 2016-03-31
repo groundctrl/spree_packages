@@ -1,0 +1,9 @@
+<!-- insert_after '[id="shipping_specs"]' -->
+
+<div data-hook="admin_product_form_package_type">
+  <%= f.field_container :package_type do %>
+    <%= f.label :package_type, Spree.t(:package_type) %>
+    <%= f.select :package_type, package_type_options, { selected: f.object.package_type }, { class: "select2" } %>
+    <%= f.error_message_on :product_type %>
+  <% end %>
+</div>

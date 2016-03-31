@@ -33,8 +33,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "factory_girl", "~> 4.5"
   spec.add_development_dependency "poltergeist", "1.6"
   spec.add_development_dependency "pry-byebug", "~> 3.2"
+  spec.add_development_dependency "rspec-collection_matchers", "~> 1.1"
   spec.add_development_dependency "rspec-rails", "~> 3.3"
   spec.add_development_dependency "sass-rails"
+  spec.add_development_dependency "shoulda-matchers", "~> 3.1"
   spec.add_development_dependency "simplecov", "~> 0.11"
   spec.add_development_dependency "sqlite3"
 end

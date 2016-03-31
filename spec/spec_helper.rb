@@ -1,3 +1,10 @@
+require "simplecov"
+
+SimpleCov.start :rails do
+  add_filter "version.rb"
+  add_filter "install_generator.rb"
+end
+
 ENV["RAILS_ENV"] = "test"
 
 begin
@@ -8,6 +15,7 @@ rescue LoadError
 end
 
 require "rspec/rails"
+require "rspec/collection_matchers"
 require "ffaker"
 require "pry-byebug"
 
@@ -18,6 +26,8 @@ require "spree/testing_support/capybara_ext"
 require "spree/testing_support/controller_requests"
 require "spree/testing_support/factories"
 require "spree/testing_support/url_helpers"
+
+require "spree_packages/factories"
 
 RSpec.configure do |config|
   config.include Spree::TestingSupport::ControllerRequests, type: :controller
