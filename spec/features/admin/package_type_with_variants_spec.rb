@@ -3,25 +3,25 @@ require "spec_helper"
 RSpec.feature "Products with variant(s)", type: :feature do
   stub_authorization!
 
-  let(:product) { create(:product) }
-  let!(:variant_1) { create(:variant, product: product) }
+  let!(:variant) { create(:variant) }
 
-  before { visit spree.edit_admin_product_variant_path(product, variant_1) }
+  before do
+    visit spree.edit_admin_product_variant_path(variant.product, variant)
+  end
 
   describe "with valid package type" do
     it "submits successfully" do
-      newly_selected = Spree.t("packages.type.#{SpreePackages::TYPES.first}")
+      first_option = SpreePackages::TYPES.first
 
-      select newly_selected, from: "variant_package_type"
+      select Spree.t("packages.type.#{first_option}"),
+             from: "variant_package_type"
 
       click_button Spree.t("actions.update")
 
+      variant.reload
+
       expect(page).to have_content("has been successfully updated!")
-
-      visit spree.edit_admin_product_variant_path(product, variant_1)
-
-      expect(page).to have_select "variant_package_type",
-                                  selected: newly_selected
+      expect(variant.package_type).to eq first_option
     end
   end
 end
