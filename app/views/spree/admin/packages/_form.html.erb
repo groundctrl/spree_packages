@@ -1,5 +1,5 @@
 <div data-hook="admin_package_form" class="row">
-  <div class="sixteen">
+  <div class="twelve">
     <%= f.field_container :name do %>
       <%= f.label :name, Spree.t("packages.label.name") %> <span class="required">*</span>
       <%= f.text_field :name, class: "fullwidth" %>
@@ -7,7 +7,7 @@
     <% end %>
   </div>
 
-  <div class="sixteen">
+  <div class="twelve">
     <%= f.field_container :description do %>
       <%= f.label :description, Spree.t("packages.label.description") %>
       <%= f.text_area :description, class: "fullwidth" %>
@@ -15,7 +15,7 @@
     <% end %>
   </div>
 
-  <div class="alpha eight columns">
+  <div class="alpha six columns">
     <%= f.field_container :package_type do %>
       <%= f.label :package_type, Spree.t("packages.label.package_type") %>
       <%= f.select :package_type, package_type_options, { selected: f.object.package_type }, { class: "select2 fullwidth" } %>
@@ -23,7 +23,7 @@
     <% end %>
   </div>
 
-  <div class="eight columns omega">
+  <div class="six columns omega">
     <%= f.field_container :height do %>
       <%= f.label :height, Spree.t("packages.label.height") %> <span class="required">*</span>
       <%= f.text_field :height, class: "fullwidth" %>
@@ -31,7 +31,7 @@
     <% end %>
   </div>
 
-  <div class="alpha eight columns">
+  <div class="alpha six columns">
     <%= f.field_container :width do %>
       <%= f.label :width, Spree.t("packages.label.width") %> <span class="required">*</span>
       <%= f.text_field :width, class: "fullwidth" %>
@@ -39,7 +39,7 @@
     <% end %>
   </div>
 
-  <div class="eight columns omega">
+  <div class="six columns omega">
     <%= f.field_container :depth do %>
       <%= f.label :depth, Spree.t("packages.label.depth") %> <span class="required">*</span>
       <%= f.text_field :depth, class: "fullwidth" %>
@@ -47,7 +47,7 @@
     <% end %>
   </div>
 
-  <div class="alpha eight columns">
+  <div class="alpha six columns">
     <%= f.field_container :packing_material do %>
       <%= f.label :packing_material do %>
         <%= f.check_box :packing_material %>
