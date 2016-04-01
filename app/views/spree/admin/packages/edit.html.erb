@@ -8,6 +8,9 @@
   <li>
     <%= button_link_to Spree.t("packages.back_to_packages_list"), spree.admin_packages_path, icon: "arrow-left" %>
   </li>
+  <li>
+    <%= button_link_to Spree.t("packages.new_package"), spree.new_admin_package_path, icon: "plus" %>
+  </li>
 <% end %>
 
 <div data-hook="admin_package_edit_form_header">
