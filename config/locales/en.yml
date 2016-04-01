@@ -1,4 +1,10 @@
 en:
   spree:
     packages:
-      hello: world
+      type:
+        poly: Box or poly-mailer
+        tube: Poster tube
+        letter: Letter or flat mailer
+        custom: Unique or custom packaging
+
+    package_type: Package Type
