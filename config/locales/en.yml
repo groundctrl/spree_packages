@@ -1,10 +1,26 @@
 en:
   spree:
     packages:
+      back_to_packages_list: Back to Packaging Container List
+      edit_package: Edit Packaging Container
+      header:
+        name: Name
+        package_type: Package Type
+      label:
+        depth: Depth
+        description: Description
+        height: Height
+        name: Name
+        package_type: Package Type
+        packing_material: Requires Packing Material
+        width: Width
+      new_package: New Packaging Container
+      packages: Packaging Containers
+      sidebar: Packaging Containers
       type:
+        custom: Unique or custom packaging
         poly: Box or poly-mailer
         tube: Poster tube
         letter: Letter or flat mailer
-        custom: Unique or custom packaging
 
     package_type: Package Type
