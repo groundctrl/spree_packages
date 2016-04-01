@@ -26,6 +26,16 @@ After installing, run the generator:
 bundle exec rails g spree_packages:install
 ```
 
+#### Rake
+
+For existing variants that do not have dimensions associated to it, a Rake task can be run to add a default value to them.
+
+```
+bundle exec rake spree_packages:dimensions
+```
+
+> NOTE: This task has no effect on variants where dimensions have already been set. It only applies to variants where `height`, `width` or `depth` is `nil`
+
 ## Testing
 
 Run tests. This will also generate the dummy app.
