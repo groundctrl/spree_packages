@@ -17,7 +17,10 @@ module Spree
       end
 
       def permitted_resource_attributes
-        [:depth, :height, :name, :package_type, :packing_material, :width]
+        [
+          :depth, :description, :height, :name, :package_type,
+          :packing_material, :width
+        ]
       end
     end
   end
