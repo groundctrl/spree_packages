@@ -1,0 +1,15 @@
+<!-- insert_bottom 'div.alpha.six.columns' -->
+
+<fieldset class="package no-border-bottom">
+  <legend align="center"><%= Spree.t("packages.package_settings")%></legend>
+
+  <div class="field" data-hook="admin_general_setting_handling_fee">
+    <%= label_tag :handling_fee, Spree.t("packages.handling_fee") %>
+    <%= text_field_tag :handling_fee, SpreePackages::Config[:handling_fee], class: "fullwidth" %>
+  </div>
+
+  <div class="field" data-hook="admin_general_setting_packing_material_weight">
+    <%= label_tag :packing_material_weight, Spree.t("packages.packing_material_weight") %>
+    <%= text_field_tag :packing_material_weight, SpreePackages::Config[:packing_material_weight], class: "fullwidth" %>
+  </div>
+</fieldset>

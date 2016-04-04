@@ -1,6 +1,9 @@
 en:
   spree:
     packages:
+      handling_fee: Handling Fee (cents)
+      package_settings: Package Settings
+      packing_material_weight: Average Packing Material Weight
       type:
         poly: Box or poly-mailer
         tube: Poster tube
