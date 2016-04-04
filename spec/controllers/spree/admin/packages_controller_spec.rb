@@ -50,4 +50,20 @@ RSpec.describe Spree::Admin::PackagesController, type: :controller do
       end
     end
   end
+
+  describe "DELETE #destroy" do
+    let(:package) { create(:package) }
+
+    it "deletes the user" do
+      now = Time.now.to_i
+
+      destroy_result = spree_delete :destroy, id: package
+
+      package.reload
+
+      expect{ destroy_result }.to change(Spree::Package, :count).by(0)
+      expect(package.deleted_at).not_to be_nil
+      expect(package.name).to have_content now
+    end
+  end
 end
