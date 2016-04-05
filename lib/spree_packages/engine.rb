@@ -7,6 +7,11 @@ module SpreePackages
 
     config.generators { |gen| gen.test_framework :rspec }
 
+    initializer "spree_packages.preferences",
+                before: :load_config_initializers do
+      SpreePackages::Config = Spree::PackageSetting.new
+    end
+
     def self.activate
       Dir[File.join(__dir__, "../../app/**/*_decorator*.rb")].each do |klass|
         Rails.application.config.cache_classes ? require(klass) : load(klass)
