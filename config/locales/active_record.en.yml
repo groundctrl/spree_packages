@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    models:
+      spree/package:
+        one: Packaging Container
+        other: Packaging Containers
+
+  attributes:
+    spree/package:
+      depth: Depth
+      description: Description
+      height: Height
+      name: Name
+      package_type: Package Type
+      packing_material: Packing Material
+      width: Width
